@@ -10,10 +10,11 @@ from utilites.utility import Utility
 @pytest.mark.usefixtures("driver")
 class TestSignUp:
 
-    with open("data/sign_up_data/happy_scenarios.json") as f:
+    with open("data/sign_up/happy_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.signup
+    @pytest.mark.smoke
     def test_sign_up_happy_scenarios(self, driver,data):
         sg = SignUpFormPage(driver)
         sg.sign_up(
@@ -29,7 +30,7 @@ class TestSignUp:
         utl = Utility()
         utl.test_element_is_not_present(element)
 
-    with open("data/sign_up_data/negative_scenarios.json") as f:
+    with open("data/sign_up/negative_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.signup

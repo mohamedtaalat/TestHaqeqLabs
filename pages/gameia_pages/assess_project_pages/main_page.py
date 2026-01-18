@@ -86,6 +86,14 @@ class MainPage(Base):
             "//input[@value='غير واضحة']"
         ).click()
 
+    def choose_firstly_results(self, result):
+        if result == "Positive":
+            self.choose_positive()
+        elif result == "Hybrid":
+            self.choose_hybrid()
+        elif result == "NotClear":
+            self.choose_not_clear()
+
     def choose_economic(self):
         self.wait_until_element_be_clickable(
             By.XPATH,
@@ -116,6 +124,18 @@ class MainPage(Base):
             "//input[@value='صحي']"
         ).click()
 
+    def choose_athar(self,athar):
+        if athar == "Economic":
+            self.choose_economic()
+        elif athar == "Social":
+            self.choose_social()
+        elif athar == "Environmental":
+            self.choose_environmental()
+        elif athar == "Healthy":
+            self.choose_healthy()
+        elif athar == "Educational":
+            self.choose_educational()
+
     def choose_big(self):
         self.wait_until_element_be_clickable(
             By.XPATH,
@@ -133,6 +153,14 @@ class MainPage(Base):
             By.XPATH,
             "//input[@value='محدود']"
         ).click()
+
+    def choose_the_value(self,value):
+        if value == "Big":
+            self.choose_big()
+        elif value == "Medium":
+            self.choose_medium()
+        elif value == "Limited":
+            self.choose_limited()
 
     def enter_stretching(self,stretching):
         self.wait_until_element_be_visible(
@@ -176,8 +204,43 @@ class MainPage(Base):
             "//input[@value='مالية']"
         ).click()
 
+    def choose_dangers(self,danger):
+        if danger == "Soqeh":
+            self.choose_soqeh()
+        elif danger == "Technology":
+            self.choose_technology()
+        elif danger == "Finance":
+            self.choose_finance()
+
     def click_start_assessment(self):
         self.wait_until_element_be_clickable(
             By.XPATH,
             "//button[@type='submit']"
         ).click()
+
+    def assess_project(
+            self,project_name,project_description,name_of_team,email,phone_number,problem,
+            solution,why_this_solution_is_better,target_audience,
+            exam_explanation,result,athar,value,stretching,source_of_income,ability_of_continue,
+            main_expectations,danger
+    ):
+        self.enter_project_name(project_name)
+        self.enter_project_description(project_description)
+        self.enter_name_of_team(name_of_team)
+        self.enter_email(email)
+        self.enter_phone_number(phone_number)
+        self.enter_problem(problem)
+        self.enter_solution(solution)
+        self.enter_why_this_solution_is_better(why_this_solution_is_better)
+        self.enter_target_audience(target_audience)
+        self.enter_exam_explanation(exam_explanation)
+        self.choose_firstly_results(result)
+        self.choose_athar(athar)
+        self.choose_the_value(value)
+        self.enter_stretching(stretching)
+        self.enter_source_of_income(source_of_income)
+        self.enter_ability_of_continue(ability_of_continue)
+        self.enter_main_expectations(main_expectations)
+        self.choose_dangers(danger)
+        self.click_start_assessment()
+

@@ -9,9 +9,11 @@ from utilites.utility import Utility
 
 @pytest.mark.usefixtures("driver")
 class TestSignIn:
-    with open("data/sign_in_data/happy_scenarios.json") as f :
+    with open("data/sign_in/happy_scenarios.json") as f :
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
+    @pytest.mark.sign_in
+    @pytest.mark.smoke
     def test_sign_in_happy_scenarios(self, driver,data):
         sign = SecondSignInFormPage(driver)
         sign.sign_in(data["email"], data["password"])
@@ -19,9 +21,10 @@ class TestSignIn:
         driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\sign_in\\happy_scenarios\\{data["screenshot"]}.png")
 
 
-    with open("data/sign_in_data/negative_scenarios.json") as f:
+    with open("data/sign_in/negative_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
+    @pytest.mark.sign_in
     def test_sign_in_negative_scenarios(self, driver,data):
         sign = SignInFormPage(driver)
         sign.sign_in(data["email"], data["password"])

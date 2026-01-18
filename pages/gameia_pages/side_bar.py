@@ -8,6 +8,12 @@ class SideBar(Base):
         super().__init__(driver)
         self.driver = driver
 
+    def click_open_side_bar(self):
+        self.wait_until_element_be_clickable(
+            By.XPATH,
+            "//div[@class='text-login_btn_bg bg-transparent rounded-md lg:hidden cursor-pointer']//*[name()='svg']"
+        ).click()
+
     def click_asses_project(self):
         self.wait_until_element_be_clickable(
             By.XPATH,
