@@ -1,8 +1,7 @@
 name: Run Tests
 on :
   push:
-    branches:
-      main
+   
 jobs:
   RunTests:
     runs-on : ubuntu-latest
