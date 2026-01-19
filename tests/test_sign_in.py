@@ -15,11 +15,13 @@ class TestSignIn:
     @pytest.mark.sign_in
     @pytest.mark.smoke
     def test_sign_in_happy_scenarios(self, driver,data):
-        sign = SecondSignInFormPage(driver)
+        sign = SignInFormPage(driver)
         sign.sign_in(data["email"], data["password"])
+        element = sign.catch_error_message()
         time.sleep(3)
         driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\sign_in\\happy_scenarios\\{data["screenshot"]}.png")
-
+        utl = Utility()
+        utl.test_element_is_not_present(element)
 
     with open("data/sign_in/negative_scenarios.json") as f:
         data = json.load(f)

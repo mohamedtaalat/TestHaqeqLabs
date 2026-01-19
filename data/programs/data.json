@@ -1,0 +1,19 @@
+[
+  {
+    "name_of_program": "Program 1",
+    "wallet": "",
+    "path_of_year_start": "//span[normalize-space()='2017']",
+    "path_of_month_start": "//span[normalize-space()='JUN']",
+    "path_of_day_start": "//span[normalize-space()='12']",
+    "path_of_year_end": "//span[normalize-space()='2018']",
+    "path_of_month_end": "//span[normalize-space()='JUN']",
+    "path_of_day_end": "//span[normalize-space()='12']",
+    "description": "Description",
+    "general_goal": "Goal 1",
+    "specific_goal": "Goal 2",
+    "perhaps": "May be 1",
+    "secondary_result": "Result 1",
+    "assumption": "Assumption 1",
+    "outcome": "Outcome 1"
+  }
+]

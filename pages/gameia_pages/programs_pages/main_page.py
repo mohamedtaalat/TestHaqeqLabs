@@ -27,16 +27,20 @@ class MainPage(Base):
             "//input[@placeholder='ادخل اسم البرنامج']"
         ).send_keys(name_of_program)
 
-    def select_wallet(self,index):
+    def select_wallet(self,wallet):
         Select(self.wait_until_element_be_clickable(
             By.XPATH,
             "//select[@class='bg-transparent min-w-100 outline-none border-none focus:border-none focus:outline-none has-[option:disabled:checked]:text-gray-400 w-full h-10 px-2 ng-pristine ng-valid ng-touched']"
-        )).select_by_index(index)
+        )).select_by_value(wallet)
 
     def enter_start_date(self,path_of_year,path_of_month,path_of_day):
         self.wait_until_element_be_clickable(
             By.XPATH,
             "//div[@class='cdk-overlay-backdrop mat-overlay-transparent-backdrop mat-datepicker-2-backdrop cdk-overlay-backdrop-showing']"
+        ).click()
+        self.wait_until_element_be_clickable(
+            By.XPATH,
+            "//button[@aria-label='Choose month and year']//span[@class='mat-mdc-button-touch-target']"
         ).click()
         self.wait_until_element_be_clickable(
             By.XPATH,
@@ -55,6 +59,10 @@ class MainPage(Base):
         self.wait_until_element_be_clickable(
             By.XPATH,
             "//div[@class='cdk-overlay-backdrop mat-overlay-transparent-backdrop mat-datepicker-2-backdrop cdk-overlay-backdrop-showing']"
+        ).click()
+        self.wait_until_element_be_clickable(
+            By.XPATH,
+            "//button[@aria-label='Choose month and year']//span[@class='mat-mdc-button-touch-target']"
         ).click()
         self.wait_until_element_be_clickable(
             By.XPATH,

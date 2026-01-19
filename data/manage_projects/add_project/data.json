@@ -1,0 +1,24 @@
+[
+  {
+    "name_of_project": "Project 1",
+    "status_of_project": "مكتمل",
+    "status_of_donates": "غير مدعوم",
+    "wallet": "",
+    "name_of_program": "",
+    "path_of_year_start": "//span[normalize-space()='2017']",
+    "path_of_month_start": "//span[normalize-space()='JUN']",
+    "path_of_day_start": "//span[normalize-space()='12']",
+    "path_of_year_end": "//span[normalize-space()='2018']",
+    "path_of_month_end": "//span[normalize-space()='JUN']",
+    "path_of_day_end": "//span[normalize-space()='12']",
+    "maiznet_of_project": "1000",
+    "name_of_owner": "Gaha 1",
+    "name_of_the_gaha_donates": "Gaha 2",
+    "name_of_the_gaha_will_make_the_project": "Gaha 3",
+    "type_of_project": "التعليم",
+    "location": "منطقة عسير",
+    "number_of_stakeholders": "100",
+    "target_feat": "All",
+    "project_description": "Description"
+  }
+]

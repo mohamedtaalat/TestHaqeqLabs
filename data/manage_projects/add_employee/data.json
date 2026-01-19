@@ -1,0 +1,14 @@
+[
+  {
+    "new_employee_name": "Mohamed",
+    "new_employee_access": "",
+    "the_department": "Educational",
+    "path_of_year": "//span[normalize-space()='2021']",
+    "path_of_month": "//span[normalize-space()='NOV']",
+    "path_of_day": "//span[normalize-space()='10']",
+    "email": "test121289@test.com",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "phone_number": "0578935428"
+  }
+]
