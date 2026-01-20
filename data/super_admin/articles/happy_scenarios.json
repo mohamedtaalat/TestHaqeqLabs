@@ -1,0 +1,14 @@
+[
+  {
+    "name_of_article": "Article 1",
+    "name_of_author": "Author 1",
+    "path_of_year": "//span[normalize-space()='2020']",
+    "path_of_month": "//span[normalize-space()='Jan']",
+    "path_of_day": "//span[normalize-space()='1']",
+    "poster": "C:\\Users\\admin\\Desktop\\automation",
+    "description": "Description",
+    "conclusion": "Conclusion",
+    "topics": "Topics 1",
+    "screenshot": "screenshot 1"
+  }
+]
