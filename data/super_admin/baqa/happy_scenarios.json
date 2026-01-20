@@ -1,0 +1,21 @@
+[
+  {
+    "name_of_new_baqa": "Baqa 1",
+    "symbol_of_baqa": "ERT",
+    "timeframe_of_trial": "12",
+    "time_of_subscription": "Monthly",
+    "number_of_wallets": "10",
+    "number_of_programs": "20",
+    "number_of_projects": "100",
+    "name_of_advantage": "Advantage",
+    "name_of_disadvantage": "Disadvantage",
+    "name_of_value": "Value",
+    "feature": "Table Of Measure",
+    "price": "100",
+    "type_of_discount": "Percentage",
+    "status_of_discount": "Stopped",
+    "code_of_discount": "WER23",
+    "status_of_baqa": "Active",
+    "screenshot": "screenshot 1"
+  }
+]

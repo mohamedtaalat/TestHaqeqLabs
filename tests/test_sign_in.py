@@ -2,14 +2,13 @@ import time
 
 import pytest
 import json
-from pages.sign_in_pages.second_sign_in_form_page import SecondSignInFormPage
-from pages.sign_in_pages.sign_in_form_page import SignInFormPage
+from pages.sign_in_pages.gameia.sign_in_form_page import SignInFormPage
 from utilites.utility import Utility
 
 
 @pytest.mark.usefixtures("driver")
 class TestSignIn:
-    with open("data/sign_in/happy_scenarios.json") as f :
+    with open("data/gameia/sign_in/happy_scenarios.json") as f :
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.sign_in
@@ -19,11 +18,11 @@ class TestSignIn:
         sign.sign_in(data["email"], data["password"])
         element = sign.catch_error_message()
         time.sleep(3)
-        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\sign_in\\happy_scenarios\\{data["screenshot"]}.png")
+        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_in\\happy_scenarios\\{data["screenshot"]}.png")
         utl = Utility()
         utl.test_element_is_not_present(element)
 
-    with open("data/sign_in/negative_scenarios.json") as f:
+    with open("data/gameia/sign_in/negative_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.sign_in
@@ -32,6 +31,6 @@ class TestSignIn:
         sign.sign_in(data["email"], data["password"])
         element = sign.catch_error_message()
         time.sleep(3)
-        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\sign_in\\negative_scenarios\\{data["screenshot"]}.png")
+        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_in\\negative_scenarios\\{data["screenshot"]}.png")
         utl = Utility()
         utl.test_element_is_present(element)

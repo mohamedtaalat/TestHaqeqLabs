@@ -21,18 +21,18 @@ class SettingsPage(Base):
     def enter_message(self, message):
         self.wait_until_element_be_clickable(
             By.XPATH,
-            "//body/app-root/div[@class='relative w-full h-[100vh]']/haqeq-setting/app-side-nav/div[@class='flex h-screen']/div[@class='flex-1 -translate-x-[10px]']/div[@class='max-content-width min-h-[90vh] bg-bright_gray']/div[@class='w-full p-8 min-h-[89vh] flex flex-col gap-8 border-t-2 border-light_gray_border bg-white']/div[@class='flex gap-6']/div[@class='flex-1 bg-white rounded-xl']/div[3]/div[1]/div[1]/button[1]/*[1]//*[name()='svg']"
+            "//h3[normalize-space()='رسالتنا']/following::button[1]"
         ).click()
 
         element = self.wait_until_element_be_visible(
             By.XPATH,
-            "//textarea[@class='w-full p-3 border border-gray-300 rounded-lg text-base leading-8 text-dark_grey ng-untouched ng-pristine ng-valid']"
+            "//textarea[@class='w-full p-3 border border-gray-300 rounded-lg text-base leading-8 text-dark_grey ng-pristine ng-valid ng-star-inserted ng-touched']"
         )
         element.clear()
         element.send_keys(message)
         self.wait_until_element_be_clickable(
             By.XPATH,
-            "//button[@class='bg-metallic_seaweed text-white px-4 py-2 rounded-lg font-semibold']"
+            "//button[contains(text(),'حفظ')]"
         ).click()
 
     def click_edit_hokma(self):

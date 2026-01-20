@@ -3,7 +3,7 @@ import time
 from selenium.webdriver.common.by import By
 
 from base.basis import Base
-from pages.sign_in_pages.sign_in_form_page import SignInFormPage
+from pages.sign_in_pages.gameia.sign_in_form_page import SignInFormPage
 
 
 class SecondSignInFormPage(Base):

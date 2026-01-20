@@ -3,13 +3,13 @@ import time
 import pytest
 from pages.gameia_pages.assess_project_pages.main_page import MainPage
 from pages.gameia_pages.side_bar import SideBar
-from pages.sign_in_pages.second_sign_in_form_page import SecondSignInFormPage
+from pages.sign_in_pages.gameia.second_sign_in_form_page import SecondSignInFormPage
 from utilites.utility import Utility
 
 
 @pytest.mark.usefixtures("driver")
 class TestAssessProject:
-    with open("data/assess_project/happy_scenarios.json") as f:
+    with open("data/gameia/assess_project/happy_scenarios.json") as f:
         data = json.load(f)
 
     @pytest.mark.parametrize("data", data)
@@ -47,10 +47,10 @@ class TestAssessProject:
         )
         time.sleep(20)
         driver.execute_script("document.body.style.zoom='40%'")
-        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\assess_project\\happy_scenarios\\{data['screenshot']}.png")
+        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\assess_project\\happy_scenarios\\{data['screenshot']}.png")
 
 
-    with open("data/assess_project/negative_scenarios.json") as f:
+    with open("data/gameia/assess_project/negative_scenarios.json") as f:
         data = json.load(f)
 
     @pytest.mark.parametrize("data", data)
@@ -87,6 +87,6 @@ class TestAssessProject:
         )
         time.sleep(2)
         driver.execute_script("document.body.style.zoom='40%'")
-        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\assess_project\\negative_scenarios\\{data['screenshot']}.png")
+        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\assess_project\\negative_scenarios\\{data['screenshot']}.png")
         utl = Utility()
         utl.test_element_is_disabled(mp.catch_button_status())
