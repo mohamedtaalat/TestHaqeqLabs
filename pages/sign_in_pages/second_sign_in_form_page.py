@@ -39,7 +39,12 @@ class SecondSignInFormPage(Base):
     def sign_in(self,email,password):
         sg = SignInFormPage(self.driver)
         sg.sign_in(email,password)
-        time.sleep(1)
+        time.sleep(3)
+        self.enter_email(email)
+        self.enter_password(password)
+        self.click_sign_in()
+
+    def sign_in2(self,email,password):
         self.enter_email(email)
         self.enter_password(password)
         self.click_sign_in()

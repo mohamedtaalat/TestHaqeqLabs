@@ -1,5 +1,6 @@
 import time
 
+from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 
 from base.basis import Base
@@ -82,8 +83,11 @@ class SignUpFormPage(Base):
         )
 
     def catch_error_message(self):
-        return self.wait_until_element_be_presence(
-            By.XPATH,
-            "//h2[@id='swal2-title']"
-        )
+        try:
+            return self.wait_until_element_be_presence(
+                By.XPATH,
+                "//h2[@id='swal2-title']"
+            )
+        except NoSuchElementException,TimeoutException:
+            return None
 

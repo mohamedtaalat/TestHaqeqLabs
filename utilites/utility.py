@@ -10,4 +10,4 @@ class Utility:
         assert element.is_enabled() is True
 
     def test_element_is_disabled(self,element):
-        assert element.is_disabled() is True
+        assert element.is_enabled() is False

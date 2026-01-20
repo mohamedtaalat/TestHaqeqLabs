@@ -6,5 +6,69 @@
     "password": "12345678",
     "confirm_password": "12345678",
     "screenshot": "screenshot 1"
+  },
+    {
+    "name_of_gameia": "",
+    "email": "test121928@test.com",
+    "phone_number": "512349874",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 2"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "test12192@test.com",
+    "phone_number": "124478923",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 3"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "test12192@test.com",
+    "phone_number": "05873298",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 4"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "test12192@test.com",
+    "phone_number": "512349874",
+    "password": "12345678",
+    "confirm_password": "1234567",
+    "screenshot": "screenshot 5"
+  },
+  {
+    "name_of_gameia": "",
+    "email": "",
+    "phone_number": "512349874",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 6"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "test12192@test.com",
+    "phone_number": "",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 7"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "",
+    "phone_number": "",
+    "password": "12345678",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 8"
+  },
+  {
+    "name_of_gameia": "mohamed",
+    "email": "test12192@test.com",
+    "phone_number": "512349874",
+    "password": "",
+    "confirm_password": "12345678",
+    "screenshot": "screenshot 9"
   }
 ]

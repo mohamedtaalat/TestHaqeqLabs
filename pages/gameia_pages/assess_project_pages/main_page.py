@@ -1,3 +1,4 @@
+from selenium.common import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
 
 from base.basis import Base
@@ -213,10 +214,13 @@ class MainPage(Base):
             self.choose_finance()
 
     def click_start_assessment(self):
-        self.wait_until_element_be_clickable(
-            By.XPATH,
-            "//button[@type='submit']"
-        ).click()
+        try:
+            self.wait_until_element_be_clickable(
+                By.XPATH,
+                "//button[@type='submit']"
+            ).click()
+        except NoSuchElementException,TimeoutException:
+            pass
 
     def assess_project(
             self,project_name,project_description,name_of_team,email,phone_number,problem,
@@ -244,3 +248,8 @@ class MainPage(Base):
         self.choose_dangers(danger)
         self.click_start_assessment()
 
+    def catch_button_status(self):
+        return self.wait_until_element_be_visible(
+            By.XPATH,
+            "//button[@type='submit']"
+        )

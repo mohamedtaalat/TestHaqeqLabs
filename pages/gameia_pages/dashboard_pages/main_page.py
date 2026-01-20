@@ -15,10 +15,12 @@ class MainPage(Base):
         ).click()
 
     def click_settings(self):
-        self.wait_until_element_be_clickable(
+        element = self.wait_until_element_be_clickable(
             By.XPATH,
             "//*[@src='svg/settings.svg']//*[name()='svg']"
-        ).click()
+        )
+        self.scroll_to_element(element)
+        element.click()
 
     def click_sign_out(self):
         self.wait_until_element_be_clickable(

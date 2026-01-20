@@ -15,10 +15,12 @@ class SideBar(Base):
         ).click()
 
     def click_asses_project(self):
-        self.wait_until_element_be_clickable(
+        element = self.wait_until_element_be_clickable(
             By.XPATH,
             "//span[contains(text(),'تقييم المشروع')]"
-        ).click()
+        )
+        self.scroll_to_element(element)
+        element.click()
 
     def click_partners(self):
         self.wait_until_element_be_clickable(
