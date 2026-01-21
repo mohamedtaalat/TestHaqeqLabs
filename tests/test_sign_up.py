@@ -10,7 +10,7 @@ from utilites.utility import Utility
 @pytest.mark.usefixtures("driver")
 class TestSignUp:
 
-    with open("data/gameia/sign_up/happy_scenarios.json.json") as f:
+    with open("data/gameia/sign_up/happy_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.signup
@@ -25,12 +25,12 @@ class TestSignUp:
             data["confirm_password"]
         )
         time.sleep(1)
-        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_up\\happy_scenarios.json\\{data['screenshot']}.png")
+        driver.save_screenshot(f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_up\\happy_scenarios\\{data['screenshot']}.png")
         element = sg.catch_error_message()
         utl = Utility()
         utl.test_element_is_not_present(element)
 
-    with open("data/gameia/sign_up/negative_scenarios.json.json") as f:
+    with open("data/gameia/sign_up/negative_scenarios.json") as f:
         data = json.load(f)
     @pytest.mark.parametrize("data", data)
     @pytest.mark.signup
@@ -45,7 +45,7 @@ class TestSignUp:
         )
         time.sleep(1)
         driver.save_screenshot(
-            f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_up\\negative_scenarios.json\\{data['screenshot']}.png"
+            f"C:\\Users\\admin\\PycharmProjects\\TestHaqeqLabs\\screenshots\\gameia\\sign_up\\negative_scenarios\\{data['screenshot']}.png"
         )
         element = sg.catch_error_message()
         utl = Utility()

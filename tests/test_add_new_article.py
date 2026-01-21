@@ -17,6 +17,7 @@ class TestAddNewArticle:
     @pytest.mark.parametrize("data", data)
     @pytest.mark.add_article
     def test_add_new_article_happy_scenarios(self, driver, data):
+        driver.get("https://admin.haqqeq-lab.com/login")
         sign = SignInFormPage(driver)
         sign.sign_in("admin@haqeq.com","12345678")
         sd = SideBarPage(driver)
@@ -45,6 +46,7 @@ class TestAddNewArticle:
     @pytest.mark.parametrize("data", data)
     @pytest.mark.add_article
     def test_add_new_article_negative_scenarios(self, driver, data):
+        driver.get("https://admin.haqqeq-lab.com/login")
         sign = SignInFormPage(driver)
         sign.sign_in("admin@haqeq.com", "12345678")
         sd = SideBarPage(driver)

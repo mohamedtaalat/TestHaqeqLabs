@@ -1,0 +1,42 @@
+[
+  {
+    "title": "",
+    "poster": "C:\\Users\\admin\\Desktop\\automation",
+    "description": "Description 1",
+    "conclusion": "Conclusion 1",
+    "topics": "Topics 1",
+    "screenshot": "screenshot 1"
+  },
+    {
+    "title": "News 1",
+    "poster": "",
+    "description": "Description 1",
+    "conclusion": "Conclusion 1",
+    "topics": "Topics 1",
+    "screenshot": "screenshot 2"
+  },
+    {
+    "title": "News 1",
+    "poster": "C:\\Users\\admin\\Desktop\\automation",
+    "description": "",
+    "conclusion": "Conclusion 1",
+    "topics": "Topics 1",
+    "screenshot": "screenshot 3"
+  },
+    {
+    "title": "News 1",
+    "poster": "C:\\Users\\admin\\Desktop\\automation",
+    "description": "Description 1",
+    "conclusion": "",
+    "topics": "Topics 1",
+    "screenshot": "screenshot 4"
+  },
+    {
+    "title": "News 1",
+    "poster": "C:\\Users\\admin\\Desktop\\automation",
+    "description": "Description 1",
+    "conclusion": "Conclusion 1",
+    "topics": "",
+    "screenshot": "screenshot 5"
+  }
+]
