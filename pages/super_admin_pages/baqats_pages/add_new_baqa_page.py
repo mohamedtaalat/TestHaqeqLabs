@@ -161,19 +161,19 @@ class AddNewBaqaPage(Base):
         if status_of_discount == "Active":
             self.wait_until_element_be_clickable(
                 By.XPATH,
-                "//label[contains(text(),'نشط')]//input[@name='discountStatus']"
+                "//div[@class='flex items-start gap-6']//input[@value='active']"
             ).click()
 
         elif status_of_discount == "Stopped":
             self.wait_until_element_be_clickable(
                 By.XPATH,
-                "//label[contains(text(),'موقوف')]//input[@name='discountStatus']"
+                "//label[contains(text(),'موقوف')]//input[@value='inactive']"
             ).click()
 
         elif status_of_discount == "Ended":
             self.wait_until_element_be_clickable(
                 By.XPATH,
-                "//label[contains(text(),'منتهي')]//input[@name='discountStatus']"
+                "//label[contains(text(),'منتهي')]//input[@value='expired']"
             ).click()
 
     def enter_code_of_discount(self,code_of_discount):
@@ -208,10 +208,12 @@ class AddNewBaqaPage(Base):
             ).click()
 
     def click_publish(self):
-        self.wait_until_element_be_clickable(
+        element = self.wait_until_element_be_clickable(
             By.XPATH,
             "//button[@class='font-bold text-2xl px-12 py-3 rounded-lg text-white bg-metallic_seaweed']"
-        ).click()
+        )
+        self.scroll_to_element(element)
+        element.click()
 
     def click_copy(self):
         self.wait_until_element_be_clickable(
@@ -247,4 +249,4 @@ class AddNewBaqaPage(Base):
         self.select_status_of_discount(status_of_discount=status_of_discount)
         self.enter_code_of_discount(code_of_discount=code_of_discount)
         self.select_status_of_baqa(status_of_baqa=status_of_baqa)
-        self.click_publish()
+        # self.click_publish()

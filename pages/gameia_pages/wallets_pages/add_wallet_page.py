@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from base.basis import Base
@@ -27,20 +29,25 @@ class AddWalletPage(Base):
         ).click()
         self.wait_until_element_be_clickable(
             By.XPATH,
-            "//button[@aria-label='Choose month and year']//span[@class='mat-mdc-button-touch-target']"
+            "//button[@aria-label='Choose month and year']"
         ).click()
+
+        time.sleep(1)
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_year
         ).click()
+        time.sleep(1)
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_month
         ).click()
+        time.sleep(1)
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_day
         ).click()
+        time.sleep(1)
 
     def enter_end_date(self, path_of_year, path_of_month, path_of_day):
         self.wait_until_element_be_clickable(
@@ -49,20 +56,23 @@ class AddWalletPage(Base):
         ).click()
         self.wait_until_element_be_clickable(
             By.XPATH,
-            "//button[@aria-label='Choose month and year']//span[@class='mat-mdc-button-touch-target']"
+            "//button[@aria-label='Choose month and year']"
         ).click()
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_year
         ).click()
+        time.sleep(1)
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_month
         ).click()
+        time.sleep(1)
         self.wait_until_element_be_clickable(
             By.XPATH,
             path_of_day
         ).click()
+        time.sleep(1)
 
     def enter_wallet_description(self,wallet_description):
         self.wait_until_element_be_visible(

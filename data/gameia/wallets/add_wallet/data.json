@@ -8,6 +8,7 @@
     "path_of_year_end": "//span[normalize-space()='2020']",
     "path_of_month_end": "//span[normalize-space()='JUN']",
     "path_of_day_end": "//span[normalize-space()='12']",
-    "wallet_description": "Description"
+    "wallet_description": "Description",
+    "screenshot": "screenshot 1"
   }
 ]
