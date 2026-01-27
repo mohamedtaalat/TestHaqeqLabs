@@ -1,0 +1,38 @@
+[
+  {
+    "wallet_name": "",
+    "owner_gaha": "Gaha 2",
+    "path_of_year_start": "//span[normalize-space()='2017']",
+    "path_of_month_start": "//span[normalize-space()='JUN']",
+    "path_of_day_start": "//span[normalize-space()='12']",
+    "path_of_year_end": "//span[normalize-space()='2020']",
+    "path_of_month_end": "//span[normalize-space()='JUN']",
+    "path_of_day_end": "//span[normalize-space()='12']",
+    "wallet_description": "Description",
+    "screenshot": "screenshot 1"
+  },
+  {
+    "wallet_name": "Wallet 2",
+    "owner_gaha": "",
+    "path_of_year_start": "//span[normalize-space()='2017']",
+    "path_of_month_start": "//span[normalize-space()='JUN']",
+    "path_of_day_start": "//span[normalize-space()='12']",
+    "path_of_year_end": "//span[normalize-space()='2020']",
+    "path_of_month_end": "//span[normalize-space()='JUN']",
+    "path_of_day_end": "//span[normalize-space()='12']",
+    "wallet_description": "Description",
+    "screenshot": "screenshot 2"
+  },
+    {
+    "wallet_name": "Wallet 2",
+    "owner_gaha": "Gaha 2",
+    "path_of_year_start": "//span[normalize-space()='2017']",
+    "path_of_month_start": "//span[normalize-space()='JUN']",
+    "path_of_day_start": "//span[normalize-space()='12']",
+    "path_of_year_end": "//span[normalize-space()='2020']",
+    "path_of_month_end": "//span[normalize-space()='JUN']",
+    "path_of_day_end": "//span[normalize-space()='12']",
+    "wallet_description": "",
+    "screenshot": "screenshot 3"
+  }
+]

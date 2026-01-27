@@ -1,7 +1,7 @@
 [
   {
-    "wallet_name": "Wallet 1",
-    "owner_gaha": "Gaha 1",
+    "wallet_name": "Wallet 2",
+    "owner_gaha": "Gaha 2",
     "path_of_year_start": "//span[normalize-space()='2017']",
     "path_of_month_start": "//span[normalize-space()='JUN']",
     "path_of_day_start": "//span[normalize-space()='12']",

@@ -81,3 +81,12 @@ class AddWalletPage(Base):
         ).send_keys(wallet_description)
 
 
+    def click_create(self):
+        element = self.wait_until_element_be_clickable(
+            By.XPATH,
+            "//button[@class='px-10 py-3 rounded-xl w-max flex items-center justify-start gap-2 font-semibold text-xl leading-7 tracking-wider disabled:opacity-50 disabled:cursor-not-allowed text-white bg-metallic_seaweed']"
+        )
+        self.scroll_to_element(element)
+        element.click()
+
+
